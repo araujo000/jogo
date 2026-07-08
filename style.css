@@ -1,0 +1,862 @@
+/* =========================================
+   O JARDIM DO NOSSO AMOR
+   STYLE.CSS
+========================================= */
+
+
+:root{
+
+    --dark:#080b18;
+    --dark2:#151a33;
+
+    --pink:#ff4f91;
+    --pinkLight:#ff9fc4;
+
+    --gold:#ffd76a;
+
+    --white:#ffffff;
+
+}
+
+
+/* RESET */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+body{
+
+    width:100vw;
+    height:100vh;
+
+    overflow:hidden;
+
+    font-family:"Poppins",sans-serif;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        180deg,
+        var(--dark),
+        var(--dark2)
+    );
+
+}
+
+
+/* =========================================
+   FUNDO
+========================================= */
+
+
+#sky{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-2;
+
+    background:
+    radial-gradient(
+        circle at top,
+        #303967,
+        #080b18 70%
+    );
+
+}
+
+
+
+#stars{
+
+    position:absolute;
+
+    inset:0;
+
+
+    background-image:
+
+    radial-gradient(
+        white 1px,
+        transparent 1px
+    );
+
+
+    background-size:
+
+    80px 80px;
+
+
+    opacity:.4;
+
+
+    animation:
+
+    starsMove 80s linear infinite;
+
+}
+
+
+
+@keyframes starsMove{
+
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+
+    to{
+
+        transform:translateY(-700px);
+
+    }
+
+
+}
+
+
+
+
+/* =========================================
+   CENAS
+========================================= */
+
+
+.scene{
+
+
+    display:none;
+
+
+    width:100%;
+
+    height:100%;
+
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    flex-direction:column;
+
+
+    padding:30px;
+
+
+}
+
+
+
+.scene.active{
+
+    display:flex;
+
+}
+
+
+
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+
+.content{
+
+
+    width:min(650px,90%);
+
+
+    padding:40px;
+
+
+    text-align:center;
+
+
+    background:
+
+    rgba(255,255,255,.08);
+
+
+    backdrop-filter:blur(15px);
+
+
+    border-radius:30px;
+
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.4);
+
+
+
+}
+
+
+
+h1{
+
+
+    font-family:"Great Vibes",cursive;
+
+
+    font-size:90px;
+
+
+    animation:
+
+    float 3s infinite ease-in-out;
+
+
+}
+
+
+
+@keyframes float{
+
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+}
+
+
+
+
+h2{
+
+
+    font-family:"Great Vibes",cursive;
+
+
+    font-size:55px;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+p{
+
+
+    line-height:1.8;
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+
+button{
+
+
+    margin-top:35px;
+
+
+    padding:18px 45px;
+
+
+    border:none;
+
+
+    border-radius:50px;
+
+
+    background:
+
+    linear-gradient(
+        45deg,
+        var(--pink),
+        var(--pinkLight)
+    );
+
+
+    color:white;
+
+
+    font-size:18px;
+
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+    transition:.4s;
+
+
+
+}
+
+
+
+button:hover{
+
+
+    transform:scale(1.08);
+
+
+    box-shadow:
+
+    0 0 40px rgba(255,80,150,.7);
+
+
+
+}
+
+
+
+
+/* =========================================
+   FLOR
+========================================= */
+
+
+#flowerArea{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    align-items:center;
+
+
+}
+
+
+
+
+#flower{
+
+
+    position:relative;
+
+
+    width:300px;
+
+
+    height:300px;
+
+
+
+}
+
+
+
+#flowerCenter{
+
+
+    position:absolute;
+
+
+    width:80px;
+
+
+    height:80px;
+
+
+    border-radius:50%;
+
+
+    background:
+
+    var(--gold);
+
+
+    left:110px;
+
+
+    top:110px;
+
+
+    z-index:5;
+
+
+    box-shadow:
+
+
+    0 0 30px gold;
+
+
+}
+
+
+
+
+
+.petal{
+
+
+    position:absolute;
+
+
+    width:110px;
+
+
+    height:150px;
+
+
+    background:#555;
+
+
+    border-radius:
+
+
+    80px 80px 20px 20px;
+
+
+
+    transition:1s;
+
+
+    opacity:.5;
+
+
+
+}
+
+
+
+
+
+.petal.open{
+
+
+    background:
+
+
+    linear-gradient(
+        180deg,
+        var(--pinkLight),
+        var(--pink)
+    );
+
+
+    opacity:1;
+
+
+    box-shadow:
+
+
+    0 0 35px var(--pink);
+
+
+}
+
+
+
+
+
+#petal1{
+
+
+    left:95px;
+
+    top:0;
+
+
+}
+
+
+
+#petal2{
+
+
+    left:10px;
+
+    top:80px;
+
+    transform:rotate(-60deg);
+
+
+}
+
+
+
+#petal3{
+
+
+    right:10px;
+
+    top:80px;
+
+    transform:rotate(60deg);
+
+
+}
+
+
+
+#petal4{
+
+
+    left:45px;
+
+    bottom:0;
+
+    transform:rotate(-150deg);
+
+
+}
+
+
+
+#petal5{
+
+
+    right:45px;
+
+    bottom:0;
+
+    transform:rotate(150deg);
+
+
+}
+
+
+
+
+#counter{
+
+
+    margin-top:25px;
+
+}
+
+
+
+
+
+/* =========================================
+   PERGUNTAS
+========================================= */
+
+
+#questionBox{
+
+
+    width:min(600px,90%);
+
+
+    margin-top:30px;
+
+
+    background:
+
+    rgba(255,255,255,.08);
+
+
+    padding:30px;
+
+
+    border-radius:25px;
+
+
+    backdrop-filter:blur(15px);
+
+
+}
+
+
+
+#answers{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:15px;
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+.answer{
+
+
+    padding:15px;
+
+
+    background:
+
+    rgba(255,255,255,.1);
+
+
+    border-radius:15px;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.answer:hover{
+
+
+    background:
+
+    rgba(255,255,255,.25);
+
+
+}
+
+
+
+
+
+/* =========================================
+   ENVELOPE
+========================================= */
+
+
+#envelope{
+
+
+    width:280px;
+
+
+    height:180px;
+
+
+    background:#ff668f;
+
+
+    position:relative;
+
+
+    border-radius:10px;
+
+
+    box-shadow:
+
+    0 20px 40px black;
+
+
+}
+
+
+
+#envelopeTop{
+
+
+    position:absolute;
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    background:#ff88aa;
+
+
+    clip-path:
+
+    polygon(
+    0 0,
+    100% 0,
+    50% 60%
+    );
+
+
+}
+
+
+
+#letterInside{
+
+
+    position:absolute;
+
+
+    top:45px;
+
+    left:100px;
+
+
+    font-size:50px;
+
+
+}
+
+
+
+
+/* =========================================
+   CARTA
+========================================= */
+
+
+#paper{
+
+
+    width:min(700px,90%);
+
+
+    min-height:400px;
+
+
+    background:#fff5e6;
+
+
+    color:#4b2633;
+
+
+    padding:40px;
+
+
+    border-radius:15px;
+
+
+    box-shadow:
+
+    0 20px 50px black;
+
+
+
+}
+
+
+
+#letterText{
+
+
+    white-space:pre-line;
+
+
+}
+
+
+
+
+
+/* =========================================
+   FINAL
+========================================= */
+
+
+#photo{
+
+
+    width:300px;
+
+
+    height:300px;
+
+
+    object-fit:cover;
+
+
+    border-radius:30px;
+
+
+    box-shadow:
+
+
+    0 0 50px rgba(255,100,160,.6);
+
+
+
+}
+
+
+
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+
+@media(max-width:600px){
+
+
+h2{
+
+    font-size:40px;
+
+}
+
+
+h1{
+
+    font-size:70px;
+
+}
+
+
+#flower{
+
+    transform:scale(.8);
+
+}
+
+
+.content{
+
+    padding:25px;
+
+}
+
+
+}#photo{
+
+    display:block;
+
+    width:300px;
+
+    height:400px;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 0 50px rgba(255,100,160,.7);
+
+}

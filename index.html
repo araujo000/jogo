@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🌹 O Jardim do Nosso Amor</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- FUNDO ANIMADO -->
+
+<div id="sky">
+
+    <div id="stars"></div>
+
+</div>
+
+
+<!-- MÚSICA -->
+
+<audio id="music" loop>
+
+    <source src="assets/music.mp3" type="audio/mpeg">
+
+</audio>
+
+
+
+<!-- =======================
+     TELA INICIAL
+======================= -->
+
+<section id="intro" class="scene active">
+
+
+<div class="content">
+
+
+<h1>
+
+🌹
+
+</h1>
+
+
+<h2>
+
+O Jardim do Nosso Amor
+
+</h2>
+
+
+<p>
+
+Eu e meu amigão chatgpt fizemos esse minigame só para você,
+cada petala representa o que penso sobre você/nós
+No final a flor se completa e mostra realmente o que importa...
+É curto porem legalzinho, se divirta amor
+❤️
+
+</p>
+
+
+<button id="start">
+
+Começar nossa história
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- =======================
+     JOGO
+======================= -->
+
+<section id="game" class="scene">
+
+
+<div id="flowerArea">
+
+
+<div id="flower">
+
+
+<div class="petal" id="petal1"></div>
+
+<div class="petal" id="petal2"></div>
+
+<div class="petal" id="petal3"></div>
+
+<div class="petal" id="petal4"></div>
+
+<div class="petal" id="petal5"></div>
+
+
+<div id="flowerCenter"></div>
+
+
+</div>
+
+
+<p id="counter">
+
+Pétalas: 0 / 5
+
+</p>
+
+
+</div>
+
+
+
+<div id="questionBox">
+
+
+<h3 id="question">
+
+</h3>
+
+
+<div id="answers">
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- =======================
+     ENVELOPE
+======================= -->
+
+
+<section id="envelopeScene" class="scene">
+
+
+<div id="envelope">
+
+
+<div id="envelopeTop"></div>
+
+
+<div id="letterInside">
+
+❤️
+
+</div>
+
+
+</div>
+
+
+<h2>
+
+Uma última surpresa...
+
+</h2>
+
+
+<button id="openEnvelope">
+
+Abrir carta
+
+</button>
+
+
+</section>
+
+
+
+
+
+
+<!-- =======================
+     CARTA
+======================= -->
+
+
+<section id="letterScene" class="scene">
+
+
+<div id="paper">
+
+
+<h2>
+
+Para você ❤️
+
+</h2>
+
+
+<p id="letterText">
+
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<!-- =======================
+     FINAL
+======================= -->
+
+
+<section id="finalScene" class="scene">
+
+
+    <img id="photo" src="assets/foto.jpeg">
+    
+    
+    <h2>
+    
+    Obrigado por existir.
+    
+    </h2>
+    
+    
+    <p>
+    
+    Eu escolheria você em todas as vidas.
+    
+    ❤️
+    
+    </p>
+    
+    
+    <button id="restart">
+    
+    Recomeçar
+    
+    </button>
+    
+    
+    </section>
+    <script src="script.js"></script>
+
+</body>
+</html>
